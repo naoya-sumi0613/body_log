@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
-  get 'users/edit'
   devise_scope :user do
     root 'users/sessions#new'
   end
@@ -9,6 +7,8 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :edit] do
+    resources :logs, only: [:new]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
