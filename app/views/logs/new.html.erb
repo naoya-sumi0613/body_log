@@ -1,3 +1,11 @@
 <h1>Logs#new</h1>
 <p>Find me in app/views/logs/new.html.erb</p>
+
+<%= form_with model: [@user, @log], local: true do |f| %>
+<%= f.date_select :date %>
+<%= f.text_field :weight %>
+<%= f.submit '入力' %>
+<% end %>
+
+
 <%= link_to "user_show（仮）", user_path(current_user) %>

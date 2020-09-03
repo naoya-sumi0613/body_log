@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
+    @logs = Log.where(user_id: current_user)
   end
 
   def edit

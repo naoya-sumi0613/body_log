@@ -1,5 +1,13 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+<% @logs.each do |log| %>
+<li>
+<%= log.date %>
+<%= log.weight %>
+</li>
+<% end %>
+
 <%= link_to "入力（仮）", new_user_log_path(current_user) %>
 <%= link_to "user_edit（仮）", edit_user_path %>
 <%= link_to "ログアウト（仮）", destroy_user_session_path, method: :delete %>
