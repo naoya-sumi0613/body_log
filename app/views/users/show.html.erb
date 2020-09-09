@@ -1,7 +1,8 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+<p><%= @today %></p>
 
-<%= line_chart @data, width: "800px", height: "500px" %>
+<%= line_chart @data, min: @min - 10, max: @max + 10, xmin: @today, discrete: true, width: "800px", height: "500px" %>
 
 <% @logs.each do |log| %>
 <li>
