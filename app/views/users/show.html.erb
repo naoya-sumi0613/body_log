@@ -1,6 +1,8 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
+<%= line_chart @data, width: "800px", height: "500px" %>
+
 <% @logs.each do |log| %>
 <li>
 <%= log.date %>
