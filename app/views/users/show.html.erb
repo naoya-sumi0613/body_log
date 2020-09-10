@@ -2,7 +2,7 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <p><%= @today %></p>
 
-<%= line_chart @data, min: @min - 10, max: @max + 10, xmin: @today, discrete: true, width: "800px", height: "500px" %>
+<%= line_chart @data, min: @min - 10, max: @max + 10, xtitle: "日付", ytitle: "体重(kg)", xmin: @today, discrete: true, width: "80%", height: "500px" %>
 
 <% @logs.each do |log| %>
 <li>
